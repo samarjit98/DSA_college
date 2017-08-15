@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1502653708 source:/home/samarjit98/Programming_tasks/cpp_task/BubbleSortUsingTwoStacks/main.cpp
+	<iostream>
+	<stack>
+	<vector>
+

@@ -32,8 +32,6 @@ void inorder(btptr root)
 {
   if(root==NULL)return;
 
-  btptr spcl=new btnode;
-  spcl->data=-1; spcl->left=NULL; spcl->right=NULL;
   queue<btptr> q;
   q.push(root);
   while(!q.empty())

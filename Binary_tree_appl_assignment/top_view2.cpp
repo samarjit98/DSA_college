@@ -72,8 +72,6 @@ int main()
   btptr head=NULL;
   create_init_tree(head);
   cout << endl;
-  //vector<int> v;
   printTopView(head);
-  //for(int i=0; i<v.size(); i++)cout << v[i] << " ";
   return 0;
 }

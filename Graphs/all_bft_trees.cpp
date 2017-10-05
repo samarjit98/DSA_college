@@ -65,7 +65,7 @@ public:
     vector<bool> visited(n, false);
     vector<int> path;
     /*
-    There is a very fundamental and minute difference between using a vector instead of an array.
+    There is a very fundamental and minute difference in choosing a vector or an array.
     Hint: It lies in the passing mechanisms :P xD!!
     This small difference makes a normal DFS, an extremely awesome AllDFS!
     */

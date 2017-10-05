@@ -56,7 +56,6 @@ public:
     {
       for(int i=0; i<n; i++)if(adj[s][i]>0 && visited[i]==false){
         allDFSUtil(i, visited, path);
-        visited[i]=false;
       }
     }
   }

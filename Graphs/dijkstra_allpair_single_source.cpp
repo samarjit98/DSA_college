@@ -57,20 +57,17 @@ public:
     for(int i=0; i<n; i++){
       spec tmp; tmp.vt=i; tmp.dist=INT_MAX; tmp.prev=-1; specs.push_back(tmp);
     }
-    /*
-    vector<bool> visited;
-    for(int i=0; i<n; i++)visited.push_back(false);
-    */
+    
     specs[v].dist=0;
     priority_queue<spec, vector<spec>, func2> q;
     q.push(specs[v]);
 
     while(!q.empty()){
       spec curr=q.top(); q.pop();
-      //visited[curr.vt]=true;
+      
       for(int i=0; i<n; i++)
       {
-        if(adj[curr.vt][i]>0 /*&& visited[i]==false*/){
+        if(adj[curr.vt][i]>0){
           if(specs[i].dist>curr.dist+adj[curr.vt][i]){
             specs[i].dist=curr.dist+adj[curr.vt][i]; specs[i].prev=curr.vt;
             q.push(specs[i]);
@@ -131,17 +128,6 @@ int main()
     g.DFS(1);
     cout << endl;
     g.djikstra(1, 6);
-/*
-    cout << endl << endl;
-  Graph a(4);
 
-  g.addEdge(1, 2, 7);
-  g.addEdge(1, 3, 1);
-  g.addEdge(3, 2, 1);
-
-  g.DFS(1);
-  cout << endl;
-  g.djikstra(1, 2);
-*/
     return 0;
 }
